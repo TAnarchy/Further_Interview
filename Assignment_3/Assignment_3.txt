@@ -41,12 +41,12 @@ Justification for Questions:
  lead types, or time periods)? - If some of the leads are making it, I can rule out a variety of issues like Authentication issues, and it tells me that the integration is not completely broken. 
  
 3 How are the leads being sent to Further? Are you using Further’s native tools, or is it a direct API integration?  - Allows me to narrow down if the issue is with a specific system within further, I can try reproducing it
-with another entry point to see if the issue is there
+with another entry point to see if the issue is there.
 
-4. Is this issue still ongoing right now, or did it happen in the past and has since resolved? If so, can you give me times when it happened? - I don't want to waste my time trying to reproduce something that is no longer happening,
+4. Is this issue still ongoing right now, or did it happen in the past and has since resolved? If so, can you give me the times when it happened? - I don't want to waste my time trying to reproduce something that is no longer happening,
 I can jump directly the logs with a specific time and investigate from there. 
 
 NOTE:
 In a real world situation, I would most likely just give the user a quick acknowledgement response first without any questions. I would then perform a quick investigation (around 30-minutes). 
-By then I either fixed an issue, identified a fix but unable to fix the issue, or I know what information from the client. I would then provide them with more detail. 
-I would either tell them the issue is fixed, tell them its not fixed but give them a clearer timeline or what needs to happen for it to be fixed, or send an E-mail similar to the one above with more tailored questions based on the investigation so far. 
+By then I either fixed an issue, identified a fix but unable to fix the issue, or I know what information from the client. I would then provide them with more details. 
+I would either tell them the issue is fixed, tell them its not fixed but give them a clearer timeline or what needs to happen for it to be fixed, or send them an E-mail similar to the one above with more tailored questions based on the investigation so far. 
