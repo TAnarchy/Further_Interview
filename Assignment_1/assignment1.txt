@@ -1,11 +1,11 @@
 1.3 (Logging Questions). I chose 2 ways to log the errors. Via console.log and via DataDog. DataDog is the primary logging tool here. DataDog or a similar logging tool would be my choice for any sort of logging. If I was using a server-side language, 
-I might have wrote to a local log file as well. Having DataDog makes troubleshooting much easier, I can go back in time and identify issues that happened in the past. 
-It is especially useful if I am having difficulty reproducing the issue that a client is experiencing, or if the issue is intermitten. 
-Console.log allows me to issue issues in real-time, and is there as a back-up if DataDog fails for some reason
+I might have wrote to a local log file as well. Having DataDog makes troubleshooting much easier, I can easily identify issues that happened at specific days or times. 
+It is especially useful if I am having difficulty reproducing the issue that a client is experiencing, or if the issue is intermittent. 
+Console.log allows me to see issues in real-time, and is there as a back-up if DataDog fails for some reason
 
 NOTE: 
 1. Since, I don't want to put the Further API Key in a public GitHub repo, I added it as a separate field. 
-2. Its not specified, but I did add validation that will prevent First and Last name from being blanked. 
+2. Its not specified, but I did add validation that will prevent First and Last name from being blank. 
 3. I created a DataDog account with a 14-day trial which will expire on June 14, 2026. After that the DataDog logging will stop working. 
 4. Following Kristen's advice to use AI in a limited way, I have manually written the code in this assignment. The only exception is the DataDog
 header tag, where I needed some help to configure that tag correclty.
