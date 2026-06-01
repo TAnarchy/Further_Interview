@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+try{
+  (function(h,o,u,n,d) {
+    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+  })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js','DD_RUM')
+
+  window.DD_RUM.onReady(function() {
+    window.DD_RUM.init({
+      applicationId: '4ad6b6dc-a93f-4fcc-be56-1b8a18f41caa',
+      clientToken: 'pub74a5dbe1a1f2bbe55335ab767fc8862d',
+      site: 'datadoghq.com',
+      service: 'service-1',
+      env: 'dev',
+      version: '1.0.0',
+      sessionSampleRate: 100,
+      sessionReplaySampleRate: 20,
+      trackResources: true,
+      trackUserInteractions: true,
+      trackLongTasks: true,
+    });
+  });
+  } catch (error)
+  {
+      console.log("DataDog logging set-up has failed")
+  }
+</script>
+
+<script>
+try{
+  (function(h,o,u,n,d) {
+    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+  })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v7/datadog-logs.js','DD_LOGS')
+
+  window.DD_LOGS.onReady(function() {
+    window.DD_LOGS.init({
+      clientToken: 'pub74a5dbe1a1f2bbe55335ab767fc8862d',
+      site: 'datadoghq.com',
+      forwardErrorsToLogs: true,
+      sessionSampleRate: 100
+    });
+  });
+  } catch(error) 
+  {
+      console.log("Datadog logging set-up has failed")
+  }
+</script>
+<script src="assignment1.js"></script>
+</head>
+
+<body>
+<label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="email">E-Mail:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="phone_number">Phone Number:</label><br>
+  <input type="text" id="phone_number" name="phone_number"><br>
+  <label for="api_key">Further API Key:</label><br>
+  <input type="text" id="api_key" name="Further API Key"><br><br>
+  <button type="button" onclick="processSubmit()">Submit</button><br><br>
+  <div id ="result_space"></div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+Hi [Client Name],
+
+I am sorry that you are having issues with the leads not showing up in your CRM, I know how frustrating that could be and I understand this is affecting your team’s reporting and downstream processes.
+
+I have a few question that will help me to get this resolved for you as soon as possible:
+
+1. Which CRM platform are you using?
+
+2. Is this happening with all of the leads? or only some of them? If it’s only some, do you notice any consistent pattern (for example, certain sources,
+ lead types, or time periods)?
+
+3 How are the leads being sent to Further? Are you using Further’s native tools, or is it a direct API integration? 
+
+4. Is this issue still ongoing right now, or did it happen ealrier in the week and has since resolved? If so, can you give me times when it happened?
+
+No Problem if you don't have all of the answers, anything you provide highly appreciated. I am also happy to jump on a call to
+troubleshoot this with you or your team. Let me know if you would like to proceed. 
+
+Thank you,
+Artiom Fine
+
+
+Possible causes:
+
+1. Authentication failure- In my experience, the most common cause of these sorts of API failures. The token could have expired,
+the scope/settings might have been changed. It might have been deleted. I should be able to easily reproduce this.
+I would then check to make sure the token is till valid with the right scoopes.
+I would check the logs for any 403 errors. 
+
+2. Rate limit issue - the number of leads could have increased dramatically. More difficult to reproduce. I would check the logs for 429 errors. 
+If there are any internal dashboards, I would check if there are spikes in the number of leads created, and check if they are associated with failures.
+
+3. Data Mapping and configuration changes - Someone made a field mandatory that wasn't mandatory before in the CRM, or removed a field. This results in 
+bad requests. I should be able to reproduce this by simulating the request the client was trying to make. I will look for HTTP 400 errors and what messages they give, they might indicates missing fields
+
+Justification for Questions:
+
+1. What CRM platform are you using? - Narrows down my investigation and allows me to check for any issues or outages tied to this specific platform. (I would not ask this question if I could easily look it up internally)
+
+2. Is this happening with all of the leads? or only some of them? If it’s only some, do you notice any consistent pattern (for example, certain sources,
+ lead types, or time periods)? - If some of the leads are making it, I can rule out a variety of issues like Authentication issues, and it tells me that the integration is not completely broken. 
+ 
+3 How are the leads being sent to Further? Are you using Further’s native tools, or is it a direct API integration?  - Allows me to narrow down if the issue is with a specific system within further, I can try reproducing it
+with another entry point to see if the issue is there
+
+4. Is this issue still ongoing right now, or did it happen in the past and has since resolved? If so, can you give me times when it happened? - I don't want to waste my time trying to reproduce something that is no longer happening,
+I can jump directly the logs with a specific time and investigate from there. 
+
+NOTE:
+In a real world situation, I would most likely just give the user a quick acknowledgement response first without any questions. I would then perform a quick investigation (around 30-minutes). 
+By then I either fixed an issue, identified a fix but unable to fix the issue, or I know what information from the client. I would then provide them with more detail. 
+I would either tell them the issue is fixed, tell them its not fixed but give them a clearer timeline or what needs to happen for it to be fixed, or send an E-mail similar to the one above with more tailored questions based on the investigation so far. 
