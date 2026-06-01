@@ -1,8 +1,8 @@
 List of Errors:
 
-1. The mandatory provider_profile field is missing, this will cause the API to return bad request response (HTTP 400).
+1. The mandatory provider_profile field is missing, this will cause the API to return a bad request response (HTTP 400).
 2. The request passes a "community_id" field which is not part of the leads request. This does not cause any failures if the provider_profile is
-correctly provided, but could cause issues in the future or confusion during debugging. Should not be included for best practice.
+correctly provided, but could cause issues in the future or confusion during debugging. It should not be included for best practice.
 3. The API path is incorrect, it should be "/api/v1/leads/" not "/leads". The incorrect API will result in an HTTP not found Error (HTTP 404)
 4. The '/' at the end is important, otherwise the API treats it as "GET" request and just returns a list of existing leads, but does not throw an error. This causes a silent failure
 5. There is no validation on the response, so the API key could be expired/valid, not have required scope or permissions, or it could have exceeded the rate limit (HTTP 403, HTTP 429)
